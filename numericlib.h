@@ -23,23 +23,22 @@
 //prototipação de funções
 void print_dtob(int numero, int base);
 void find_letter(int number);
-//end
-void print_dtob(int numero, int base)
-{//logica deve ser em pilha
-    while (numero > 0)
-    {
-        if ((numero % base) < 10)
-        {
-            printf("%d", numero % base);
-            numero = numero / base;
-        }
-        else
-        {
-            find_letter(numero / base);
-            numero = numero / base;
-        }
 
-    }printf(" ");
+void print_dtob(int numero, int base)
+{ //logica deve ser em pilha
+    if (numero <= 0)
+        return;
+    if ((numero % base) < 10)
+    {
+        print_dtob(numero % base, base);
+        printf("%d", numero % base);
+    }
+    else
+    {
+        print_dtob(numero % base, base);
+        find_letter(numero / base);
+    }
+    printf(" ");
 }
 void find_letter(int number)
 {
