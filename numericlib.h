@@ -25,8 +25,8 @@ void print_dtob(int numero, int base);
 void find_letter(int number);
 //end
 void print_dtob(int numero, int base)
-{
-    while (numero >= 0)
+{//logica deve ser em pilha
+    while (numero > 0)
     {
         if ((numero % base) < 10)
         {
@@ -38,7 +38,8 @@ void print_dtob(int numero, int base)
             find_letter(numero / base);
             numero = numero / base;
         }
-    }
+
+    }printf(" ");
 }
 void find_letter(int number)
 {

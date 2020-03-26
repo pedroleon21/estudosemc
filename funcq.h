@@ -37,6 +37,12 @@ void resolucao()
 {
     char buffer[30];
     int num = 180;
+    printf("%d ",num);
+    print_dtob(num,2);
+    print_dtob(num,8);
+    print_dtob(num,16);
+    print_dtob(num,2);
+    print_dtob(num,7);
 }
 
 void soma_dos_n_quocientes()
