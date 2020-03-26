@@ -38,7 +38,6 @@ void print_dtob(int numero, int base)
         print_dtob(numero / base, base);
         find_letter(numero / base);
     }
-    printf(" ");
 }
 void find_letter(int number)
 {

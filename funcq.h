@@ -37,12 +37,41 @@ void resolucao()
 {
     char buffer[30];
     int num = 180;
-    printf("%d ",num);
-    print_dtob(num,2);
-    print_dtob(num,8);
-    print_dtob(num,16);
-    print_dtob(num,2);
-    print_dtob(num,7);
+    printf("%d ",num);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,8);printf("    ");
+    print_dtob(num,16);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,7);printf("    ");
+    printf("\n");
+    num = 166;
+    printf("%d ",num);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,8);printf("    ");
+    print_dtob(num,16);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,7);printf("    ");printf("\n");
+num = 158;
+    printf("%d ",num);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,8);printf("    ");
+    print_dtob(num,16);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,7);printf("    ");printf("\n");
+    num = 13;
+    printf("%d ",num);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,8);printf("    ");
+    print_dtob(num,16);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,7);printf("    ");printf("\n");
+    num = 244;
+    printf("%d ",num);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,8);printf("    ");
+    print_dtob(num,16);printf("    ");
+    print_dtob(num,2);printf("    ");
+    print_dtob(num,7);printf("    ");printf("\n");
 }
 
 void soma_dos_n_quocientes()
