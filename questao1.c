@@ -12,8 +12,6 @@ void questao_dois();
 
 int main()
 {
-    teste();
-    /*
     int op;
     do
     {
@@ -44,7 +42,6 @@ int main()
             break;
         }
     } while (op != 0);
-    */
     return 0;
 }
 
@@ -102,5 +99,5 @@ void questao_um()
 
 void questao_dois()
 {
-    resolucao();    
+    resolucao();
 }

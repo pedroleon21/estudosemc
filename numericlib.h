@@ -18,30 +18,30 @@
 
 #ifndef STRING_H
 #define STRING_H
-#include<string.h>
+#include <string.h>
 #endif
 //prototipação de funções
 void print_dtob(int numero, int base);
+void find_letter(int number);
 //end
 void print_dtob(int numero, int base)
 {
     while (numero >= 0)
     {
-        if((numero % base) < 10){
-            printf("%d",numero % base);
-            numero = numero/base;
+        if ((numero % base) < 10)
+        {
+            printf("%d", numero % base);
+            numero = numero / base;
         }
         else
         {
-            printf("%c",find_letter(numero % base));
-            numero = numero/base;
+            find_letter(numero / base);
+            numero = numero / base;
         }
-        
     }
-    
 }
-char find_letter(int number)
+void find_letter(int number)
 {
-    
+    printf("%c", (55 + number));
 }
 #endif
