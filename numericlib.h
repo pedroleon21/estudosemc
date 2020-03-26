@@ -30,12 +30,12 @@ void print_dtob(int numero, int base)
         return;
     if ((numero % base) < 10)
     {
-        print_dtob(numero % base, base);
+        print_dtob(numero / base, base);
         printf("%d", numero % base);
     }
     else
     {
-        print_dtob(numero % base, base);
+        print_dtob(numero / base, base);
         find_letter(numero / base);
     }
     printf(" ");
