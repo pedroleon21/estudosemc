@@ -222,7 +222,7 @@ void cabecalho_da_questao(int num)
         printf("\nConverter quantidade de dias para anos, meses e dias. (leve em consideração que um ano tem 360 dias e um mês tem 30 dias)");
         break;
     case 3: // c
-        printf("\nPara um valor inteiro, informar o troco com a menor quantidade de notas disponíveis");
+        printf("\nDistância entre dois pontos");
         break;
     case 4: // d
         printf("\nPara um valor inteiro, informar o troco com a menor quantidade de notas disponíveis");
