@@ -28,7 +28,7 @@ void mais_velho();
 void usuarios_instagram();
 void soma_dos_impares();
 void soma_dos_n_quocientes();
-float somador_interativo(float quociente, float limit);
+float somador_iterativo(float quociente, float limit);
 void questao_um();
 void resolucao();
 //end
@@ -94,9 +94,9 @@ void soma_dos_n_quocientes()
     cabecalho_da_questao(8);
     printf("\nDigite o numero: ");
     scanf("%d", &N);
-    printf("%.2f", somador_interativo(1, (float)N));
+    printf("%.2f", somador_iterativo(1, (float)N));
 }
-float somador_interativo(float quociente, float limite)
+float somador_iterativo(float quociente, float limite)
 {
     float acumulado = 0;
     while (quociente <= limite)
