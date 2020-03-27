@@ -15,10 +15,9 @@
 #define MATH_H
 #include <math.h>
 #endif
-//lib importada
-#include "numericlib.h"
 
 //prototipação das funções
+void print_dtob(int numero, int base);
 void cabecalho_da_questao(int num);
 void perimetro();
 void qtd_anos_meses_dias();
@@ -33,6 +32,22 @@ float somador_interativo(float quociente, float limit);
 void questao_um();
 void resolucao();
 //end
+void print_dtob(int numero, int base)
+{ //logica deve ser em pilha
+    if (numero <= 0)
+        return;
+    if (numero % base >= 10)
+    {
+        print_dtob(numero / base, base);
+        printf("%c", 87 + numero % base);
+    }
+    else
+    {
+        print_dtob(numero / base, base);
+        printf("%d", numero % base);
+    }
+}
+
 void resolucao()
 {
     char buffer[30];
