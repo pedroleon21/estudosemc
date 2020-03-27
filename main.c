@@ -6,7 +6,8 @@
 
 //cabecalho de funcoes
 #include "um.h"
-#include"dois.h"
+#include "dois.h"
+#include "tres.h"
 
 void questao_um();
 
@@ -18,6 +19,7 @@ int main()
         printf("\n0.......................SAIR");
         printf("\n1................. Questão 1");
         printf("\n2................. Questão 2");
+        printf("\n2................. Questão 3");
         printf("\nescolha dentra as opções:");
         scanf("%d", &op);
         switch (op)
@@ -30,6 +32,9 @@ int main()
             break;
         case 2:
             questao_dois();
+            break;
+        case 3:
+            questao_tres();
             break;
         default:
             printf("\nInvalido!\n");

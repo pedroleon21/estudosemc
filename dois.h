@@ -61,13 +61,4 @@ void questao_dois()
     mostra(num);
 }
 
-void soma_dos_n_quocientes()
-{
-    int N;
-    cabecalho_da_questao(8);
-    printf("\nDigite o numero: ");
-    scanf("%d", &N);
-    printf("%.2f", somador_iterativo(1, (float)N));
-}
-
 #endif

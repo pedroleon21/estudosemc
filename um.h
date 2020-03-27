@@ -17,7 +17,7 @@
 #endif
 
 //prototipação das funções
-void cabecalho_da_questao(int num);
+void cabecalho_da_questao1(int num);
 void perimetro();
 void qtd_anos_meses_dias();
 void dist_entre_pontos();
@@ -34,7 +34,7 @@ void questao_um();
 void soma_dos_n_quocientes()
 {
     int N;
-    cabecalho_da_questao(8);
+    cabecalho_da_questao1(8);
     printf("\nDigite o numero: ");
     scanf("%d", &N);
     printf("%.2f", somador_iterativo(1, (float)N));
@@ -53,7 +53,7 @@ float somador_iterativo(float quociente, float limite)
 void soma_dos_impares()
 {
     int i, N, somador = 0;
-    cabecalho_da_questao(7);
+    cabecalho_da_questao1(7);
     printf("\nDigite o numero: ");
     scanf("%d", &N);
     for (i = 0; i <= N; i++)
@@ -65,16 +65,16 @@ void soma_dos_impares()
 void usuarios_instagram()
 {
     int mes[2];
-    cabecalho_da_questao(6);
+    cabecalho_da_questao1(6);
     printf("\nDigite a quantidade nos 2 meses: ");
     scanf("%d %d", &mes[0], &mes[1]);
-    printf("\nA espectativa para o proximo mes é de %d seguidores", mes[1] - mes[0]);
+    printf("\nA espectativa para o proximo mes é de %d seguidores", mes[1] + (mes[1] - mes[0]));
 }
 
 void mais_velho()
 {
     int i, j, aux, vet[3];
-    cabecalho_da_questao(5);
+    cabecalho_da_questao1(5);
     printf("\ndigite as idades: ");
     scanf("%d %d %d", &vet[0], &vet[1], &vet[2]);
     booblesort(vet, 3);
@@ -84,7 +84,7 @@ void mais_velho()
 void troco_menos_notas() //calcula notas somente com valores inteiros
 {
     int valor, n50 = 0, n20 = 0, n10 = 0, n2 = 0;
-    cabecalho_da_questao(4);
+    cabecalho_da_questao1(4);
     printf("\nDigite o valor: ");
     scanf("%d", &valor);
     while (valor >= 50)
@@ -113,7 +113,7 @@ void troco_menos_notas() //calcula notas somente com valores inteiros
 void dist_entre_pontos()
 {
     double y1, y2, x1, x2;
-    cabecalho_da_questao(3);
+    cabecalho_da_questao1(3);
     printf("\nDigite os valores para x e y ponto 1: ");
     scanf("%lf %lf", &x1, &y1);
     printf("\nDigite os valores para x e y ponto 2: ");
@@ -123,7 +123,7 @@ void dist_entre_pontos()
 void qtd_anos_meses_dias() // calcula quantidade de anos meses e dias com entrada quatidade de dias
 {
     int dia = 0, ano = 0, mes = 0;
-    cabecalho_da_questao(2);
+    cabecalho_da_questao1(2);
     printf("\nDigite a quantidade de dias:");
     scanf("%d", &dia);
     while (dia >= 360)
@@ -142,7 +142,7 @@ void perimetro()
 {
     float *vet;
     vet = (float *)calloc(3, sizeof(float));
-    cabecalho_da_questao(1);
+    cabecalho_da_questao1(1);
     scanf("%f %f %f", &vet[0], &vet[1], &vet[2]);
     if (abs(vet[1] - vet[2]) < vet[0] && vet[0] < vet[1] + vet[2])
         printf("\nPerimetro = %.2f", (vet[0] + vet[1] + vet[2]));
@@ -168,7 +168,7 @@ void booblesort(int *vet, int size) //booble sort function
         }
     }
 }
-void cabecalho_da_questao(int num)
+void cabecalho_da_questao1(int num)
 {
     switch (num)
     {
@@ -199,7 +199,6 @@ void cabecalho_da_questao(int num)
     }
     printf("\n\n");
 }
-
 
 void questao_um()
 {
@@ -252,6 +251,5 @@ void questao_um()
         }
     } while (op != 0);
 }
-
 
 #endif
