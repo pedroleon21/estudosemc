@@ -22,25 +22,20 @@
 #endif
 //prototipação de funções
 void print_dtob(int numero, int base);
-void find_letter(int number);
 
 void print_dtob(int numero, int base)
 { //logica deve ser em pilha
     if (numero <= 0)
         return;
-    if ((numero % base) < 10)
+    if (numero % base >= 10)
     {
         print_dtob(numero / base, base);
-        printf("%d", numero % base);
+        printf("%c", 87 + numero % base);
     }
     else
     {
         print_dtob(numero / base, base);
-        find_letter(numero / base);
+        printf("%d", numero % base);
     }
-}
-void find_letter(int number)
-{
-    printf("%c", (55 + number));
 }
 #endif
