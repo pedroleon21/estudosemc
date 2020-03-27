@@ -18,8 +18,6 @@ int main()
         printf("\n0.......................SAIR");
         printf("\n1................. Questão 1");
         printf("\n2................. Questão 2");
-        printf("\n3................. Questão 3");
-        printf("\n4................. Questão 4");
         printf("\nescolha dentra as opções:");
         scanf("%d", &op);
         switch (op)
@@ -32,10 +30,6 @@ int main()
             break;
         case 2:
             questao_dois();
-            break;
-        case 3:
-            break;
-        case 4:
             break;
         default:
             printf("\nInvalido!\n");
