@@ -1,5 +1,5 @@
-#ifndef FUNCQ_H
-#define FUNCQ_H
+#ifndef UM_H
+#define UM_H
 
 #ifndef STDIO_H
 #define STDIO_H
@@ -17,7 +17,6 @@
 #endif
 
 //prototipação das funções
-void print_dtob(int numero, int base);
 void cabecalho_da_questao(int num);
 void perimetro();
 void qtd_anos_meses_dias();
@@ -30,63 +29,7 @@ void soma_dos_impares();
 void soma_dos_n_quocientes();
 float somador_iterativo(float quociente, float limit);
 void questao_um();
-void resolucao();
 //end
-void print_dtob(int numero, int base)
-{ //logica deve ser em pilha
-    if (numero <= 0)
-        return;
-    if (numero % base >= 10)
-    {
-        print_dtob(numero / base, base);
-        printf("%c", 87 + numero % base);
-    }
-    else
-    {
-        print_dtob(numero / base, base);
-        printf("%d", numero % base);
-    }
-}
-
-void resolucao()
-{
-    char buffer[30];
-    int num = 180;
-    printf("%d ",num);printf("    ");
-    print_dtob(num,2);printf("    ");
-    print_dtob(num,8);printf("    ");
-    print_dtob(num,16);printf("    ");
-    print_dtob(num,3);printf("    ");
-    print_dtob(num,7);printf("    ");printf("\n");
-    num = 166;
-    printf("%d ",num);printf("    ");
-    print_dtob(num,2);printf("    ");
-    print_dtob(num,8);printf("    ");
-    print_dtob(num,16);printf("    ");
-    print_dtob(num,3);printf("    ");
-    print_dtob(num,7);printf("    ");printf("\n");
-num = 158;
-    printf("%d ",num);printf("    ");
-    print_dtob(num,2);printf("    ");
-    print_dtob(num,8);printf("    ");
-    print_dtob(num,16);printf("    ");
-    print_dtob(num,3);printf("    ");
-    print_dtob(num,7);printf("    ");printf("\n");
-    num = 13;
-    printf("%d ",num);printf("    ");
-    print_dtob(num,2);printf("    ");
-    print_dtob(num,8);printf("    ");
-    print_dtob(num,16);printf("    ");
-    print_dtob(num,3);printf("    ");
-    print_dtob(num,7);printf("    ");printf("\n");
-    num = 244;
-    printf("%d ",num);printf("    ");
-    print_dtob(num,2);printf("    ");
-    print_dtob(num,8);printf("    ");
-    print_dtob(num,16);printf("    ");
-    print_dtob(num,3);printf("    ");
-    print_dtob(num,7);printf("    ");printf("\n");
-}
 
 void soma_dos_n_quocientes()
 {
@@ -256,5 +199,59 @@ void cabecalho_da_questao(int num)
     }
     printf("\n\n");
 }
+
+
+void questao_um()
+{
+    int op;
+    do
+    {
+        printf("\n0.......................SAIR");
+        printf("\n1....................letra A");
+        printf("\n2....................letra B");
+        printf("\n3....................letra C");
+        printf("\n4....................letra D");
+        printf("\n5....................letra E");
+        printf("\n6....................letra F");
+        printf("\n7....................letra G");
+        printf("\n8....................letra H");
+        printf("\nescolha dentra as opções:");
+        scanf("%d", &op);
+        switch (op)
+        {
+        case 0:
+            printf("\n\n voltando ao menu anterior!\n");
+            break;
+        case 1:
+            perimetro();
+            break;
+        case 2:
+            qtd_anos_meses_dias();
+            break;
+        case 3:
+            dist_entre_pontos();
+            break;
+        case 4:
+            troco_menos_notas();
+            break;
+        case 5:
+            mais_velho();
+            break;
+        case 6:
+            usuarios_instagram();
+            break;
+        case 7:
+            soma_dos_impares();
+            break;
+        case 8:
+            soma_dos_n_quocientes();
+            break;
+        default:
+            printf("\nInvalido!\n");
+            break;
+        }
+    } while (op != 0);
+}
+
 
 #endif
