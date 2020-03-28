@@ -17,6 +17,7 @@
 #endif
 
 //prototipação de função
+int eprimo(int num);
 void questao_tres();
 void cabecalho_da_questao2(int num);
 void ordem_reversa();
@@ -29,7 +30,82 @@ void par_ou_impar();
 void notas_poderadas();
 void porcento();
 void imc();
+void somasepar();
+void soma_primo();
+void traingulo_de_pascal();
+void q15();
+void goldbach(int num);
 //end
+void goldbach(int num)
+{
+    int i, a = 3;
+    while (a < b)
+    {
+        for (i = num - 1; i > a; i--)
+            if (eprimo(i))
+                if (a + i == num)
+                {
+                    printf("%d + %d", a, i);
+                    break;
+                }
+        a++;
+        while (!eprimo(a))
+        {
+            a++;
+        }
+    }
+}
+void q15()
+{
+    int num;
+    cabecalho_da_questao2(15);
+    printf("\nDigite o numero: ");
+    sncaf("%d", &num);
+    if (eprimo(num))
+        goldbach(num);
+}
+
+void traingulo_de_pascal()
+{
+    int i, j, k, num;
+    cabecalho_da_questao2(13);
+    printf("\nDigite o numero: ");
+    scanf("%d", &num);
+    cabecalho_da_questao2(13);
+    printf("\nDigite o numero: ");
+    scanf("%d", &num);
+    for (k = 1; k <= num; k++)
+        for (i = 1; i < num; i++)
+        {
+            printf"%d",j);
+            for (j = i; i > 0; i--)
+                printf("%d", j);
+        }
+}
+void soma_primo()
+{
+    int num, i, sum = 0;
+    cabecalho_da_questao2(13);
+    printf("\nDigite o numero: ");
+    scanf("%d", &num);
+    for (i = 0; i < num; i++)
+        if (eprimo(i))
+            sum += i;
+    printf("\nTotal: %d", sum);
+}
+
+void somasepar()
+{
+    int num, i, soma = 0;
+    cabecalho_da_questao2(11);
+    printf("\nDigite o numero: ");
+    scanf("%d", &num);
+    if (!(num % 2))
+        for (i = 0; i < num; i++)
+            if (num % 2)
+                soma += i;
+    printf("\nTotal: %d", soma);
+}
 
 void imc()
 {
@@ -93,6 +169,7 @@ void quadrante()
         }
     }
 }
+
 void questao_tres()
 {
     int op;
@@ -103,6 +180,17 @@ void questao_tres()
         printf("\n1................. Questão B");
         printf("\n1................. Questão C");
         printf("\n1................. Questão D");
+        printf("\n1................. Questão E");
+        printf("\n1................. Questão F");
+        printf("\n1................. Questão G");
+        printf("\n1................. Questão H");
+        printf("\n1................. Questão I");
+        printf("\n1................. Questão J");
+        printf("\n1................. Questão K");
+        printf("\n1................. Questão L");
+        printf("\n1................. Questão M");
+        printf("\n1................. Questão N");
+        printf("\n1................. Questão O");
         printf("\nescolha dentra as opções:");
         scanf("%d", &op);
         switch (op)
@@ -139,6 +227,15 @@ void questao_tres()
             break;
         case 10:
             porcento();
+            break;
+        case 11:
+            somasepar();
+            break;
+        case 12:
+
+            break;
+        case 13:
+            soma_primo();
             break;
         default:
             printf("\nInvalido!\n");
@@ -280,6 +377,14 @@ void cabecalho_da_questao2(int num)
         break;
     }
     printf("\n\n");
+}
+int eprimo(int num)
+{
+    int i;
+    for (i = 2; i < num; i++)
+        if (!(num % 2))
+            return 0;
+    return 1;
 }
 
 #endif
